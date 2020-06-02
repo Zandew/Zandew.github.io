@@ -1,3 +1,15 @@
-title: HELLO
-description: HI
+title: Andrew Xue
+description: Hello
 theme: jekyll-theme-minimal
+
+defaults:
+    - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
