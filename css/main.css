@@ -1,5 +1,6 @@
 body {
     padding: 100px;
     text-align: center;
-    font: "Concert One";
+    font-family: "Concert One";
+    color: black;
 }
