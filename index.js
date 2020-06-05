@@ -1,5 +1,5 @@
 
 function go(){
-    document.getElementById("foo").innerHTML += "HELLO";
+    document.getElementById("foo").innerHTML = "HELLO";
 }
 
