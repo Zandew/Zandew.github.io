@@ -1,4 +1,4 @@
-body {
+body h1{
     font-family: 'Concert One';
     font-size: 40px;
     color: black;
@@ -8,5 +8,6 @@ body {
 
 .logos {
     height: 50px;
-    width: 50px;
+    width: auto;
+    padding 20px;
 }
