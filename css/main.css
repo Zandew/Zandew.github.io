@@ -16,9 +16,14 @@ img{
     padding 3px;
 }
 
+.buttons {
+    width: 50%;
+    height: 15%;
+}
+
 .options {
     border: none;
-    background-color: black;
-    font-size: 40;
+    background-color: white;
+    font-size: 40px;
 }
 
