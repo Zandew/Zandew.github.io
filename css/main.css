@@ -19,7 +19,7 @@ img{
 
 .container {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 100px 100px;
     grid-template-rows: auto;
 }
 
@@ -34,5 +34,5 @@ img{
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 1;
-    grid-row-end; 1;
+    grid-row-end: 1;
 }
