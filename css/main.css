@@ -17,13 +17,14 @@ img{
 }
 
 .options{
+    width: 50%;
     margin: auto;
 }
 
 button {
+    font-size: 40px;
     border: none;
     width: 15%;
     height: 15%;
-    font-size: 40px;
 }
 
