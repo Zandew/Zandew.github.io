@@ -12,6 +12,10 @@ img{
     padding 3px;
 }
 
+.buttons {
+    background-color: black;
+}
+
 .options {
     border: none;
     background-color: white;
