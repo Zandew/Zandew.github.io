@@ -15,3 +15,13 @@ img{
 body .logos {
     text-align: center;
 }
+
+.about {
+    float: left;
+    font-size: 50px;
+}
+
+.problems {
+    float: right;
+    font-size: 50px;
+}
