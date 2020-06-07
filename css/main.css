@@ -21,19 +21,9 @@ img{
     display: grid;
     grid-template-columns: 25px 25px;
     grid-template-rows: 20px;
+}
+
+.subt {
+    font-size: 25px;
     text-align: center;
-}
-
-.about {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: row1-start;
-    grid-row-end: 3;
-}
-
-.problems {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 1;
 }
