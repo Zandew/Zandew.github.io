@@ -1,1 +1,17 @@
+body h1{
+    font-family: 'Concert One';
+    font-size: 60px;
+    color: black;
+    padding-top: 75px;
+    text-align: center;
+}
 
+img{
+    height: 50px;
+    width: auto;
+    padding: 5px;
+}
+
+body .logos {
+    text-align: center;
+}
