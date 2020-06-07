@@ -18,6 +18,11 @@ img{
 }
 
 .options{
-    text-align: center;
+    margin: 0 auto;
+}
+
+button {
+    border: none;
+    width: 10%;
 }
 
