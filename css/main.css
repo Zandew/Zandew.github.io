@@ -9,12 +9,11 @@ body h1{
 img{
     height: 50px;
     width: auto;
+    padding 3px;
 }
 
 .logos {
-    margin: auto;
     text-align: center;
-    padding: 10px;
 }
 
 
