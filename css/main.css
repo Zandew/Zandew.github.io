@@ -16,15 +16,20 @@ img{
     text-align: center;
     padding: 10px;
 }
-/*
+
 .container {
-    display: grid;
-    grid-template-columns: 25px 25px;
-    grid-template-rows: 20px;
+    display: table;
+    clear: both;
 }
 
-.subt {
-    font-size: 25px;
-    text-align: center;
+.about {
+    float: left;
+    height: 50px;
+    width: 25%;
 }
-*/
+
+.problems {
+    float: left;
+    height: 50px;
+    width: 25%;
+}
