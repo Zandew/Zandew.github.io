@@ -17,23 +17,3 @@ img{
     padding: 10px;
 }
 
-.container {
-    display: table;
-    clear: both;
-}
-
-.about {
-    float: left;
-    height: 50px;
-    width: 25%;
-}
-
-.problems {
-    float: left;
-    height: 50px;
-    width: 25%;
-}
-
-.txt {
-    text-align: center;
-}
