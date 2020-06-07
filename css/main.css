@@ -14,8 +14,12 @@ img{
 
 .options {
     border: none;
+    color: gray:
     background-color: white;
     font-size: 40px;
     padding: 10px;
 }
 
+.options:hover {
+    color: black;
+}
