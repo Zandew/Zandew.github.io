@@ -4,7 +4,7 @@ title: Home
 ---
 
 <body>
-    <h1> AndrewXue </h1>
+    <h1> Andrew Xue </h1>
     <div style="text-align:center;">
         <div class="logos">
             <a href="https://github.com/Zandew"><img class="logo" src="/logos/github.png" alt="Github"></a>
@@ -21,9 +21,11 @@ title: Home
     </div>
     <div id="info" style="text-align: center;">
         <input type="text" id="searchbar" placeholder="Search DMOJ or Codeforces (e.g. ccc20s5 or 1234A)">
-        {% for post in ./_posts %}
-        <li> {{post.title}} </li>
-        {% endfor %}
+        <ul>
+            {% for post in ./_posts %}
+            <li> {{post.title}} </li>
+            {% endfor %}
+        </ul>
     </div>
 </body>
 
