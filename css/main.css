@@ -15,12 +15,12 @@ body h1{
 .options {
     border: none;
     background-color: white;
-    color: gray;
+    /*color: gray;*/
     font-size: 40px;
     padding: 10px;
     outline: none;
 }
 
 .options:hover {
-    color: black;
+    /*color: black;*/
 }
