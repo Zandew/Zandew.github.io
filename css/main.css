@@ -6,7 +6,7 @@ body h1{
     text-align: center;
 }
 
-img{
+.logo {
     height: 50px;
     width: auto;
     padding 3px;
