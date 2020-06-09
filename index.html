@@ -3,29 +3,28 @@ layout: default
 title: Home
 ---
 
-<body>
-    <h1> Andrew Xue </h1>
-    <div style="text-align:center;">
-        <div class="logos">
-            <a href="https://github.com/Zandew"><img class="logo" src="/logos/github.png" alt="Github"></a>
-            <a href="https://www.linkedin.com/in/andrew-xue/"><img class="logo" src="/logos/linkedin.png" alt="LinkedIn"></a>
-            <a href="https://dmoj.ca/user/Wandex"><img class="logo" src="/logos/dmoj.png" alt="DMOJ"></a>
-            <a href="https://codeforces.com/profile/Zandew"><img class="logo" src="/logos/codeforces.png" alt="Codeforces"></a>
-        </div>
+<h1> Andrew Xue </h1>
+<div style="text-align:center;">
+    <div class="logos">
+        <a href="https://github.com/Zandew"><img class="logo" src="/logos/github.png" alt="Github"></a>
+        <a href="https://www.linkedin.com/in/andrew-xue/"><img class="logo" src="/logos/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://dmoj.ca/user/Wandex"><img class="logo" src="/logos/dmoj.png" alt="DMOJ"></a>
+        <a href="https://codeforces.com/profile/Zandew"><img class="logo" src="/logos/codeforces.png" alt="Codeforces"></a>
     </div>
-    <div style="text-align:center;">
-        <div class="buttons" style="width:100%;">
-            <input type="button" class="options" id="btn1" value="About" onclick="about()">
-            <input type="button" class="options" id="btn2" value="Solutions" onclick="solutions()">
-        </div>
+</div>
+<div style="text-align:center;">
+    <div class="buttons" style="width:100%;">
+        <input type="button" class="options" id="btn1" value="About" onclick="about()">
+        <input type="button" class="options" id="btn2" value="Solutions" onclick="solutions()">
     </div>
-    <div id="info" style="text-align: center;">
-        <input type="text" id="searchbar" placeholder="Search DMOJ or Codeforces (e.g. ccc20s5 or 1234A)">
+</div>
+<div id="info" style="text-align: center;">
+    <input type="text" id="searchbar" placeholder="Search DMOJ or Codeforces (e.g. ccc20s5 or 1234A)" style="width: 30%; height: 10%;">
+    <div>
         <ul>
             {% for post in site.posts %}
             <li> {{post.title}} </li>
             {% endfor %}
         </ul>
     </div>
-</body>
-
+</div>
