@@ -22,7 +22,7 @@ title: Home
     <div id="info" style="text-align: center;">
         <input type="text" id="searchbar" placeholder="Search DMOJ or Codeforces (e.g. ccc20s5 or 1234A)">
         <ul>
-            {% for post in ./_posts %}
+            {% for post in site.posts %}
             <li> {{post.title}} </li>
             {% endfor %}
         </ul>
