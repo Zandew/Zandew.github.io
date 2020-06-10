@@ -10,7 +10,7 @@
             window.store = {
                 {% for post in site.posts %}
                 "{{ post.title }}": {
-                    "content": {{ post.content }}
+                    "content": "{{ post.content }}"
                 }
                 {% unless forloop.last %},{% endunless %}
                 {% endfor %}
