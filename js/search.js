@@ -29,6 +29,8 @@
          }
      }
      
+     searchResults.innerHTML = "<li>HELLO</li>";
+     return;
      var searchTerm = document.getQueryVariable('query');
      
      if (searchTerm) {
