@@ -1,4 +1,6 @@
  (function() {
+     searchResults.innerHTML = "<li>HELLO</li>";
+     /*
      function displaySearchResults(results, store) {
          var searchResults = document.getElementById('search-results');
 
@@ -28,9 +30,7 @@
              }
          }
      }
-     
-     searchResults.innerHTML = "<li>HELLO</li>";
-     return;
+    
      var searchTerm = document.getQueryVariable('query');
      
      if (searchTerm) {
@@ -52,5 +52,5 @@
         //var results = idx.search(searchTerm);
         searchResults.innerHTML = "<li>HELLO</li>";
         //displaySearchResults(results, window.store);
-    }
+    }*/
  })();
