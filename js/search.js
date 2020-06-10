@@ -45,7 +45,6 @@ if (searchTerm) {
             });
         }
     });
-    document.getElementById('search-results').innerHTML = "<li>HELLO</li>";
-    /*var results = idx.search(searchTerm);
-    displaySearchResults(results, window.store);*/
+    var results = idx.search(searchTerm);
+    displaySearchResults(results, window.store);
 }
