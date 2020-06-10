@@ -7,7 +7,7 @@ function about() {
 }
 
 function solutions() {
-    document.getElementById("info").innerHTML = '<input type="text" id="search-box" name="query"><input type="submit" value="search" onclick="find()">';
+    document.getElementById("info").innerHTML = '<input type="text" id="search-box" style="outline: none;"><input type="submit" value="search" onclick="find()">';
     document.getElementById("btn1").style.color = "gray";
     document.getElementById("btn2").style.color = "black";
 }
@@ -15,7 +15,7 @@ function solutions() {
 function find(){
     var prob = document.getElementById("search-box").value.toLowerCase();
     for (var key in window.store){
-        if (window.store[key].title.toLowerCase() == prob){
+        if (key.toLowerCase() == prob){
             document.getElementById("code").innerHTML = "<p>"+window.store[key].content+"</p>";
             return;
         }
