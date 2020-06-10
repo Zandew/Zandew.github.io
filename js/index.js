@@ -12,10 +12,9 @@ function solutions() {
 }
 
 function find(){
-    var prob = document.getElementById("search-box").value;
-    document.getElementById("code").innerHTML = prob;
+    var prob = document.getElementById("search-box").value.toLowerCase();
     for (var key in window.store){
-        if (window.store[key].title == prob){
+        if (window.store[key].title.toLowerCase() == prob){
             document.getElementById("code").innerHTML += "<p>"+window.store[key].content+"</p>";
             return;
         }
