@@ -13,16 +13,6 @@ function solutions() {
 
 function find(){
     var prob = document.getElementById("search-box").value;
-    window.store = {
-      {% for post in site.posts %}
-        "{{ post.url | slugify }}": {
-          "title": "{{ post.title | xml_escape }}",
-          "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-          "url": "{{ post.url | xml_escape }}"
-        }
-        {% unless forloop.last %},{% endunless %}
-      {% endfor %}
-    };
     for (var key in window.store){
         if (window.store[key].title == prob){t
             document.getElementById("code").innerHTML = "<p>"+window.store[key].content+"</p>";
