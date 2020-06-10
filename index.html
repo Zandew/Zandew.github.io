@@ -19,12 +19,9 @@ title: Home
     </div>
 </div>
 <div id="info" style="text-align: center;">
-    <input type="text" id="searchbar" placeholder="Search DMOJ or Codeforces (e.g. ccc20s5 or 1234A)" style="width: 30%; height: 10%;">
-    <div>
-        <ul>
-            {% for post in site.posts %}
-            <li> {{post.title}} </li>
-            {% endfor %}
-        </ul>
-    </div>
+    <form action="/search.html" method="get">
+      <label for="search-box">Search</label>
+      <input type="text" id="search-box" name="query">
+      <input type="submit" value="search">
+    </form>
 </div>
