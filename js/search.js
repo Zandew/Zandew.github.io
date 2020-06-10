@@ -1,5 +1,5 @@
  (function() {
-     searchResults.innerHTML = "<li>HELLO</li>";
+     document.getElementById('search-results').innerHTML = "<li>HELLO</li>";
      /*
      function displaySearchResults(results, store) {
          var searchResults = document.getElementById('search-results');
