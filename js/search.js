@@ -43,8 +43,8 @@ if (searchTerm) {
                 'content': window.store[key].content,
                 'url': window.store[key].url
             });
-        });
-    }
+        }
+    });
     document.getElementById('search-results').innerHTML = "<li>HELLO</li>";
     /*var results = idx.search(searchTerm);
     displaySearchResults(results, window.store);*/
