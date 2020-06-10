@@ -30,10 +30,9 @@ function getQueryVariable(variable) {
 var searchTerm = getQueryVariable('query');
 
 if (searchTerm) {
-    document.getElementById('search-results').innerHTML = "<li>HI</li>";
     document.getElementById('search-box').value = searchTerm;
     
-    /*var idx = lunr(function () {
+    var idx = lunr(function () {
         this.field('id');
         this.field('title', { boost: 10 });
         this.field('content');
@@ -46,6 +45,7 @@ if (searchTerm) {
             });
         });
     }
-    var results = idx.search(searchTerm);
+    document.getElementById('search-results').innerHTML = "<li>HELLO</li>";
+    /*var results = idx.search(searchTerm);
     displaySearchResults(results, window.store);*/
 }
