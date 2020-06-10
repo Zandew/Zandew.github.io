@@ -17,9 +17,8 @@ function displaySearchResults(results, store) {
 
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
-    return query;
     var vars = query.split('&');
-
+    return vars;
     for (var i = 0; i < vars.length; i++) {
         var pair = vars[i].split('=');
 
@@ -29,8 +28,8 @@ function getQueryVariable(variable) {
     }
 }
 
-//var searchTerm = document.getQueryVariable('query');
-document.getElementById('search-results').innerHTML = "<li>"+window.location.search+"</li>";
+var searchTerm = document.getQueryVariable('query');
+document.getElementById('search-results').innerHTML = "<li>"+searchTerm+"</li>";
 /*
 if (searchTerm) {
     document.getElementById('search-box').setAttribute("value", searchTerm);
