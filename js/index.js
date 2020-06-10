@@ -6,7 +6,18 @@ function about() {
 }
 
 function solutions() {
-    document.getElementById("info").innerHTML = "<h1> SOLUTIONS </h1>";
+    document.getElementById("info").innerHTML = '<input type="text" id="search-box" name="query"><input type="submit" value="search" onclick="find()">';
     document.getElementById("btn1").style.color = "gray";
     document.getElementById("btn2").style.color = "black";
+}
+
+function find(){
+    var prob = document.getElementById("search-box").value;
+    for (var key in window.store){
+        if (window.store[key].title == prob){
+            document.getElementById("code").innerHTML = "<p>"+window.store[key].content+"</p>";
+            return;
+        }
+    }
+    document.getElementById("code").innerHTML = "<h1>NOT FOUND</h1>";
 }
