@@ -17,7 +17,6 @@ function displaySearchResults(results, store) {
 
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
-    return query;
     var vars = query.split('&');
     for (var i = 0; i < vars.length; i++) {
         var pair = vars[i].split('=');
@@ -28,8 +27,8 @@ function getQueryVariable(variable) {
     }
 }
 
-document.getElementById('search-results').innerHTML = "<li>"+HELLO+"</li>";
-var searchTerm = document.getQueryVariable('query');
+document.getElementById('search-results').innerHTML = "<li>"+"HELLO"+"</li>";
+var searchTerm = getQueryVariable('query');
 document.getElementById('search-results').innerHTML =+ "<li>"+searchTerm+"</li>";
 /*
 if (searchTerm) {
