@@ -27,10 +27,8 @@ function getQueryVariable(variable) {
     }
 }
 
-document.getElementById('search-results').innerHTML = "<li>"+"HELLO"+"</li>";
 var searchTerm = getQueryVariable('query');
-document.getElementById('search-results').innerHTML =+ "<li>"+searchTerm+"</li>";
-/*
+
 if (searchTerm) {
     document.getElementById('search-box').setAttribute("value", searchTerm);
 
@@ -49,4 +47,4 @@ if (searchTerm) {
     }
     var results = idx.search(searchTerm);
     displaySearchResults(results, window.store);
-}*/
+}
