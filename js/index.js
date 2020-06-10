@@ -15,7 +15,7 @@ function solutions() {
 function find(){
     var prob = document.getElementById("search-box").value.toLowerCase();
     for (var key in window.store){
-        if (key.toLowerCase() == prob){
+        if (window.store[key].title.toLowerCase() == prob){
             document.getElementById("code").innerHTML = "<p>"+window.store[key].content+"</p>";
             return;
         }
