@@ -22,11 +22,7 @@ if (searchTerm) {
 
   for (var key in window.store) { // Add the data to lunr
     idx.add({
-      'id': key,
-      'title': window.store[key].title,
-      'author': window.store[key].author,
-      'category': window.store[key].category,
-      'content': window.store[key].content
+      'title': window.store[key].title
     });
 
     var results = idx.search(searchTerm); // Get lunr to perform a search
@@ -42,8 +38,7 @@ function displaySearchResults(results, store) {
 
     for (var i = 0; i < results.length; i++) {  // Iterate over the results
       var item = store[results[i].ref];
-      appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-      appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+      appendString += '<li><h3>' + item.title + '</h3></li>';
     }
 
     searchResults.innerHTML = appendString;
