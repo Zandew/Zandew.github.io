@@ -13,11 +13,12 @@ function solutions() {
 
 function find(){
     var prob = document.getElementById("search-box").value;
+    document.getElementById("code").innerHTML = prob;
     for (var key in window.store){
         if (window.store[key].title == prob){
-            document.getElementById("code").innerHTML = "<p>"+window.store[key].content+"</p>";
+            document.getElementById("code").innerHTML += "<p>"+window.store[key].content+"</p>";
             return;
         }
     }
-    document.getElementById("code").innerHTML = "<h1>NOT FOUND</h1>";
+    document.getElementById("code").innerHTML += "<h1>NOT FOUND</h1>";
 }
