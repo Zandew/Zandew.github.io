@@ -29,8 +29,8 @@ function getQueryVariable(variable) {
     }
 }
 
-var searchTerm = document.getQueryVariable('query');
-document.getElementById('search-results').innerHTML = "<li>"+searchTerm+"</li>";
+//var searchTerm = document.getQueryVariable('query');
+document.getElementById('search-results').innerHTML = "<li>"+window.location.search+"</li>";
 /*
 if (searchTerm) {
     document.getElementById('search-box').setAttribute("value", searchTerm);
