@@ -7,7 +7,7 @@ function about() {
 }
 
 function solutions() {
-    document.getElementById("info").innerHTML = '<input type="Find a Problem" id="search-box" style="outline: none; width: 200px; height: 25px;"><input type="submit" value="Search" onclick="find()" style="height: 30px;">';
+    document.getElementById("info").innerHTML = '<input type="Find a Problem" id="search-box" style="outline: none; width: 200px; height: 25px;"><input type="image" src="/imgs/search.png" onclick="find()" style="width: 30px; height: 30px;">';
     document.getElementById("btn1").style.color = "gray";
     document.getElementById("btn2").style.color = "black";
 }
