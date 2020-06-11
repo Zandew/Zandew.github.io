@@ -7,13 +7,13 @@ function about() {
 }
 
 function solutions() {
-    document.getElementById("info").innerHTML = '<input type="Find a Problem" id="search-box" style="outline: none; width: 200px; height: 25px;"><input type="image" src="/imgs/search.png" onclick="find()" style="width: 30px; height: 30px;">';
+    document.getElementById("info").innerHTML = '<input type="text" value="Find a Problem" id="search-box" style="outline: none; width: 200px; height: 25px;"><input type="image" src="/imgs/search.png" onclick="find()" style="width: 30px; height: 30px; padding-top:10px">';
     document.getElementById("btn1").style.color = "gray";
     document.getElementById("btn2").style.color = "black";
 }
 
 function find(){
-    var prob = document.getElementById("search-box").value.toLowerCase();
+    var prob = document.getElementById("search-box").value.trim().toLowerCase();
     for (var key in window.store){
         if (window.store[key].title.toLowerCase() == prob){
             document.getElementById("code").innerHTML = "<p>"+window.store[key].content+"</p>";
