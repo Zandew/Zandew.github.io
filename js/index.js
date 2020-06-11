@@ -7,7 +7,7 @@ function about() {
 }
 
 function solutions() {
-    document.getElementById("info").innerHTML = '<input type="text" placeholder="Find a Problem" id="search-box" style="outline: none; width: 200px; height: 25px;"><input type="image" src="/imgs/search.png" onclick="find()" style="width: 30px; height: 30px; outline: none; padding-top: 500px;">';
+    document.getElementById("info").innerHTML = '<div style="vertical-align: top;"><input type="text" placeholder="Find a Problem" id="search-box" style="outline: none; width: 200px; height: 25px;"><input type="image" src="/imgs/search.png" onclick="find()" style="width: 30px; height: 30px; outline: none;"></div>';
     document.getElementById("btn1").style.color = "gray";
     document.getElementById("btn2").style.color = "black";
 }
