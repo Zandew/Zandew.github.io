@@ -56,11 +56,44 @@
     height: 100%;
 }
 
+#about {
+    width: 60%;
+    height: 200px;
+    display: inline-block;
+}
+
+#me {
+    width: 25%;
+    height: 200px;
+    float: left;
+}
+
+#bio {
+    margin-left: 25%;
+    height: 200px;
+    font-family: 'Balsamiq Sans';
+}
+
 .buttons {
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 30px;
+}
+
+#search-box {
+    outline: none;
+    width: 200px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#search-btn {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    margin-left: 5px;
 }
 
 #tip {
