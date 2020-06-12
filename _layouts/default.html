@@ -7,6 +7,7 @@
         <meta charset="UTF-8">
         <script src = "./js/index.js"></script>
         <script>
+            /*
             window.store = {
                 {% for post in site.posts %}
                 "{{ post.title }}": {
@@ -15,7 +16,10 @@
                 }
                 {% unless forloop.last %},{% endunless %}
                 {% endfor %}
-            };
+            };*/
+            {% for post in site.posts %}
+            window.localStorage.setItem(post.title, post.content);
+            {% endfor %}
         </script>
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js">
         </script>

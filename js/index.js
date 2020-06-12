@@ -15,11 +15,17 @@ function solutions() {
 
 function find(){
     var prob = document.getElementById("search-box").value.trim().toLowerCase();
-    for (var key in window.store){
+    var cont = window.localStorage.getItem(prob);
+    if (cont){
+        document.getElementById("code").innerHTML = '<div id="code-ctn"><pre class="prettyprint lang-cpp" style="float: left">'+cont+'</pre></div>';
+    }else {
+        document.getElementById("code").innerHTML = "<h1>NOT FOUND</h1>";
+    }
+    /*for (var key in window.store){
         if (window.store[key].title.toLowerCase() == prob){
             document.getElementById("code").innerHTML = '<div id="code-ctn"><pre class="prettyprint lang-cpp" style="float: left">'+window.store[key].content+'</pre></div>';
             return;
         }
     }
-    document.getElementById("code").innerHTML = "<h1>NOT FOUND</h1>";
+    document.getElementById("code").innerHTML = "<h1>NOT FOUND</h1>";*/
 }
