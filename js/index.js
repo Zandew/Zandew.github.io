@@ -17,7 +17,6 @@ function find(){
     for (var key in window.store){
         if (window.store[key].title.toLowerCase() == prob){
             document.getElementById("code").innerHTML = '<div id="code-ctn">'+window.store[key].content+'</div>';
-            //document.getElementById("code").innerHTML = '<div id="code-ctn"><pre class="prettyprint lang-cpp" style="float: left">'+window.store[key].content+'</pre></div>';
             return;
         }
     }
