@@ -111,5 +111,6 @@
 }
 
 #error {
+    width: auto;
     margin: 3% auto;
 }
