@@ -15,18 +15,11 @@ function solutions() {
 
 function find(){
     var prob = document.getElementById("search-box").value.trim().toLowerCase();
-    {% for post in site.posts %}
-        {% if post.title == prob %}
-            document.getElementById("code").innerHTML = '<div id="code-ctn"><pre class="prettyprint lang-cpp" style="float: left">'+window.store[key].content+'</pre></div>';
-    return;
-    {% endif %}
-    {% endfor %}
-    /*
     for (var key in window.store){
         if (window.store[key].title.toLowerCase() == prob){
             document.getElementById("code").innerHTML = '<div id="code-ctn"><pre class="prettyprint lang-cpp" style="float: left">'+window.store[key].content+'</pre></div>';
             return;
         }
-    }*/
+    }
     document.getElementById("code").innerHTML = "<h1>NOT FOUND</h1>";
 }
