@@ -18,7 +18,7 @@
                 {% endfor %}
             };*/
             {% for post in site.posts %}
-            document.getElementById("storage").innerHTML += "HELLO";
+            document.getElementById("storage").innerHTML += "<h1>HELLO</h1>";
             {% endfor %}
         </script>
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js">
@@ -26,7 +26,7 @@
     </head>
     <body>
         <div id="storage">
-            
+            <h1> HI </h1>
         </div>
         {{ content }}
     </body>
