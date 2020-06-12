@@ -18,7 +18,8 @@
                 {% endfor %}
             };*/
             {% for post in site.posts %}
-            document.getElementById("storage").innerHTML += post.title;
+            document.getElementById("storage").innerHTML += "HELLO";
+            document.getElementById("storage").innerHTML += "{{post.title | xml_escape}}";
             window.localStorage.setItem(post.title, post.content);
             {% endfor %}
         </script>
