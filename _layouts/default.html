@@ -20,7 +20,7 @@
             {% for post in site.posts %}
             document.getElementById("storage").innerHTML += "HELLO";
             document.getElementById("storage").innerHTML += "{{post.title | xml_escape}}";
-            window.localStorage.setItem(post.title, post.content);
+            window.localStorage.setItem("{{post.title | xml_escape}}", {{post.content | jsonify}});
             {% endfor %}
         </script>
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js">
