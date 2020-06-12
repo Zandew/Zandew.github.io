@@ -16,10 +16,11 @@ function find(){
     var prob = document.getElementById("search-box").value.trim().toLowerCase();
     for (var key in window.store){
         if (window.store[key].title.toLowerCase() == prob){
-            document.getElementById("code").innerHTML = '<div id="code-ctn"><pre class="prettyprint lang-cpp" style="float: left">'+window.store[key].content+'</pre></div>';
+            document.getElementById("code").innerHTML = '<div id="code-ctn"><pre class="prettyprint lang-cpp" style="float: left">'+"int main() { cin >> t; while (t--){ cin >> a >> b; if (a>b) swap(a, b); int diff = b-a; int v = max(0, (a-diff)/3); int ans = v2; b -= v3; a -= v*3; ans += min(a, b/2); cout << ans << endl; } }"+'</pre></div>';
             return;
         }
     }
     document.getElementById("code").innerHTML = "<h1>NOT FOUND</h1>";
 }
+
 
