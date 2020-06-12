@@ -26,7 +26,7 @@ function find(){
             return;
         }
     }
-    document.getElementById("code").innerHTML = '<div id="code-ctn"><h1>NOT FOUND</h1></div>';
+    document.getElementById("code").innerHTML = '<div id="error"><h1>NOT FOUND</h1></div>';
 }
 
 
