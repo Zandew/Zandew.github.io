@@ -25,7 +25,6 @@ function find(){
 
 window.store = {
     {% for post in site.posts %}
-    document.getElementById("storage").innerHTML += "<h1> H </h1>";
     "{{ post.title }}": {
         "title": "{{post.title | xml_escape}}",
         "content": {{ post.content | jsonify}}
