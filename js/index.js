@@ -23,12 +23,3 @@ function find(){
     document.getElementById("code").innerHTML = "<h1>NOT FOUND</h1>";
 }
 
-window.store = {
-    {% for post in site.posts %}
-    "{{ post.title }}": {
-        "title": "{{post.title | xml_escape}}",
-        "content": {{ post.content | jsonify}}
-    }
-    {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-};
