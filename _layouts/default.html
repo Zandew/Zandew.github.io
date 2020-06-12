@@ -5,9 +5,9 @@
         <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Concert+One|Balsamiq+Sans'>
         <link rel="stylesheet" type="text/css" href="./css/main.css">
         <meta charset="UTF-8">
-        <script src = "./js/index.js"></script>
+        <script src = "./js/index.js.liquid"></script>
         <script>
-            window.store = {
+            /*window.store = {
                 {% for post in site.posts %}
                 "{{ post.title }}": {
                     "title": "{{post.title | xml_escape}}",
@@ -15,7 +15,7 @@
                 }
                 {% unless forloop.last %},{% endunless %}
                 {% endfor %}
-            };
+            };*/
         </script>
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js">
         </script>
