@@ -63,6 +63,10 @@
     display: inline-block;
 }
 
+#andrewxue {
+    border-radius: 35%;
+}
+
 #note {
     color: white;
     transition: 1s;
