@@ -1,5 +1,5 @@
 function about() {
-    document.getElementById("info").innerHTML = '<div id="about"> <img class="andrewxue" src="./andrewxue.png" alt="Andrew Xue" id="me"> <p id="bio">'+{{me.content | jsonify}}+'</p> </div>';
+    document.getElementById("info").innerHTML = '<div id="about"> <img class="andrewxue" src="./andrewxue.png" alt="Andrew Xue" id="me"> <p id="bio">Hello, my name is Andrew Xue and I\'m an incoming student at the University of Waterloo Computer Science program.\n\nI am a (now retired) competitive programmer who peaked in 2020 when I scored 69 on the Canadian Computing Competition and qualified for the Candian Computing Olympiad. Despite my decent score on the CCC, I only managed to clinch a bronze medal due to my poor performance at the CCO.</em id="note"> If you think bronze is a good result, you probably don\'t know how OI contests are run.</em>\n\nIn my spare time, I enjoy playing sports such as badminton and chess, binging anime and manga, and working on programming side projects.\n\n While browsing through my solutions, please note that these programs were written solely for the purpose of AC\'ing the problem, and therefore may lack proper formatting and comments.</p></div>';
     document.getElementById("code").innerHTML = "";
     document.getElementById("btn1").style.color = "black";
     document.getElementById("btn2").style.color = "gray";
