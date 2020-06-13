@@ -63,10 +63,6 @@
     display: inline-block;
 }
 
-#andrewxue {
-    border-radius: 35%;
-}
-
 #note {
     color: white;
     transition: 1s;
@@ -80,6 +76,7 @@
     width: 25%;
     height: 200px;
     float: left;
+    border-radius: 35%;
 }
 
 #bio {
