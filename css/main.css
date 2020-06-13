@@ -65,6 +65,7 @@
 
 #note {
     color: white;
+    transition: 1s;
 }
 
 #note:hover {
