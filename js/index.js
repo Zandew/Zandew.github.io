@@ -14,7 +14,9 @@ function solutions() {
     document.getElementById("info").innerHTML = `
     <input type="text" placeholder="Find a Problem" id="search-box"><input type="image" src="/imgs/search.png" id="search-btn" onclick="find()">
     `;
-    document.getElementById("info").innerHTML += '<h2 id="tip"> Enter a DMOJ or Codeforces problem code (e.g. ccc20s5 or 1234A) </h2>';
+    document.getElementById("info").innerHTML += `
+    <h2 id="tip"> Enter a DMOJ or Codeforces problem code (e.g. ccc20s5 or 1234A) </h2>
+    `;
     document.getElementById("search-box").onkeypress = function(event){
         if (event.keyCode == 13 || event.which == 13){
             document.getElementById("search-btn").click();
