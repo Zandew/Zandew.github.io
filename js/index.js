@@ -32,7 +32,7 @@ function solutions() {
 function projects() {
     document.getElementById("info").innerHTML = `
     <div class="proj-container">
-        <div class="proj">
+        <div class="proj" style="background-image: url('../imgs/minimusicwidget.png')">
             <div class="proj-header">
                 <h2>MiniMusicWidget</h2>
             </div>
@@ -42,7 +42,7 @@ function projects() {
                 </p>
             </div>
         </div>
-        <div class="proj">
+        <div class="proj" style="background-image: url('../imgs/presentworthy.png')">
             <div class="proj-header">
                 <h2>Present Worthy</h2>
             </div>
