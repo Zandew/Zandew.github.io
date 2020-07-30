@@ -2,12 +2,13 @@ function about() {
     document.getElementById("info").innerHTML = `
     <div id="about"> 
         <img id="andrewxue" src="/imgs/andrewxue.png" alt="Andrew Xue"> 
-        <p id="bio">Hello! I\'m a graduate from Earl Haig SS and also an incoming Computer Science student at the University of Waterloo.<br><br>I enjoy coding and am a (now retired) competitive programmer. Not that I\'ve had much of a career, but I peaked in 2020 when I scored 69 on the Canadian Computing Competition and qualified for the Candian Computing Olympiad. Despite my decent score on the CCC, I only managed to come out with a bronze medal due to my poor performance at the CCO.<br><br><em id="note"> If you think bronze is a good result, you\'re probably not familiar with how OI contests are run.</em><br><br>Some of my hobbies include playing sports such as badminton and chess, binging anime and manga, and working on side projects.<br><br> While browsing through my solutions, please note that these programs were written solely for the purpose of AC\'ing the problem, and therefore may lack proper formatting and comments.</p>
+        <p id="bio">${aboutText}</p>
     </div>
     `;
     document.getElementById("code").innerHTML = "";
     document.getElementById("btn1").style.color = "black";
     document.getElementById("btn2").style.color = "gray";
+    document.getElementById("btn3").style.color = "gray";
 }
 
 function solutions() {
@@ -25,6 +26,38 @@ function solutions() {
     document.getElementById("code").innerHTML = "";
     document.getElementById("btn1").style.color = "gray";
     document.getElementById("btn2").style.color = "black";
+    document.getElementById("btn3").style.color = "gray";
+}
+
+function projects() {
+    document.getElementById("info").innerHTML = `
+    <div class="proj-container">
+        <div class="proj">
+            <div class="proj-header">
+                <h2>MiniMusicWidget</h2>
+            </div>
+            <div class="proj-body">
+                <p class="proj-text">
+                Hello
+                </p>
+            </div>
+        </div>
+        <div class="proj">
+            <div class="proj-header">
+                <h2>Present Worthy</h2>
+            </div>
+            <div class="proj-body">
+                <p class="proj-text">
+                Hi
+                </p>
+            </div>
+        </div>
+    </div>
+    `;
+    document.getElementById("code").innerHTML = "";
+    document.getElementById("btn1").style.color = "gray";
+    document.getElementById("btn2").style.color = "gray";
+    document.getElementById("btn3").style.color = "black";
 }
 
 function find(){
