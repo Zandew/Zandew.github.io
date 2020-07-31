@@ -32,26 +32,30 @@ function solutions() {
 function projects() {
     document.getElementById("info").innerHTML = `
     <div class="proj-container">
-        <div class="proj" style="background-image: url('../imgs/minimusicwidget.png')">
-            <div class="proj-header">
-                <h2>MiniMusicWidget</h2>
+        <a href="https://github.com/Zandew/MiniMusicWidget" style="text-decoration: none" target="_blank">
+            <div class="proj" style="background-image: url('../imgs/minimusicwidget.png')" >
+                <div class="proj-header">
+                    <h2>MiniMusicWidget</h2>
+                </div>
+                <div class="proj-body">
+                    <p class="proj-text">
+                    ${mmwText}
+                    </p>
+                </div>
             </div>
-            <div class="proj-body">
-                <p class="proj-text">
-                Hello
-                </p>
+        </a>
+        <a href="https://github.com/Zandew/Present-Worthy" style="text-decoration: none" target="_blank">
+            <div class="proj" style="background-image: url('../imgs/presentworthy.png')">
+                <div class="proj-header">
+                    <h2>Present Worthy</h2>
+                </div>
+                <div class="proj-body">
+                    <p class="proj-text">
+                    ${pwText}
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="proj" style="background-image: url('../imgs/presentworthy.png')">
-            <div class="proj-header">
-                <h2>Present Worthy</h2>
-            </div>
-            <div class="proj-body">
-                <p class="proj-text">
-                Hi
-                </p>
-            </div>
-        </div>
+        </a>
     </div>
     `;
     document.getElementById("code").innerHTML = "";

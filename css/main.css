@@ -128,8 +128,9 @@
     text-align: center;
 }
 
-h2 {
+.proj-container h2 {
     margin: 3px auto;
+    color: black;
 }
 
 .proj {
@@ -142,6 +143,7 @@ h2 {
 
 .proj:hover > .proj-body {
     height: 150px;
+    border-bottom: 2px solid black;
 }
 
 .proj:hover > .proj-body > .proj-text {
@@ -153,10 +155,14 @@ h2 {
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 0px;
-    width: 200px;
+    width: 210px;
     height: 35px;
     border: 3px solid gray;
     background-color: white;
+}
+
+.proj-header h2 {
+    font-family: 'Recursive';
 }
 
 .proj-body {
@@ -168,13 +174,14 @@ h2 {
     height: 0px;
     border-left: 2px solid black;
     border-right: 2px solid black;
-    border-bottom: 2px solid black;
+    border-bottom: 0px solid black;
     background-color: white;
     transition: all 0.75s;
 }
 
 .proj-text {
-    transition-delay: 1s;
+    color: black;
+    font-family: 'Balsamiq Sans';
     transition: all 0.5s;
     opacity: 0;
 }
