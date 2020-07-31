@@ -14,12 +14,50 @@ title: Home
 </div>
 <div class="container">
     <div class="buttons">
-      <span class="options" id="btn1" onclick="about()"> About Me </span>
-      <span class="options" id="btn2" onclick="solutions()"> Solutions </span>
-      <span class="options" id="btn3" onclick="projects()"> Projects </span>
+      <span class="options" id="btn0" onclick="move(0)" style="color: black;"> About Me </span>
+      <span class="options" id="btn1" onclick="move(1)"> Solutions </span>
+      <span class="options" id="btn2" onclick="move(2)"> Projects </span>
     </div>
 </div>
-<div id="info" class="container">
-</div>
-<div id="code">
+<div id="main" class="main">
+    <div class="page">
+        <div class="container">
+            <div id="about"> 
+                <img id="andrewxue" src="/imgs/andrewxue.png" alt="Andrew Xue"> 
+                <p id="bio"></p>
+            </div>
+        </div>
+    </div><div class="page">
+        <div class="container">
+            <input type="text" placeholder="Find a Problem" id="search-box"><input type="image" src="/imgs/search.png" id="search-btn" onclick="find()">
+            <h2 id="tip"> Enter a DMOJ problem code (e.g. ccc20s5) </h2>
+        </div>
+        <div id="code">
+            
+        </div>
+    </div><div class="page">
+        <div class="proj-container">
+            <a href="https://github.com/Zandew/MiniMusicWidget" style="text-decoration: none" target="_blank">
+                <div class="proj" style="background-image: url('../imgs/minimusicwidget.png')" >
+                    <div class="proj-header">
+                        <h2>MiniMusicWidget</h2>
+                    </div>
+                    <div class="proj-body">
+                        <p id="mmwText" class="proj-text"></p>
+                    </div>
+                </div>
+            </a>
+            <a href="https://github.com/Zandew/Present-Worthy" style="text-decoration: none" target="_blank">
+                <div class="proj" style="background-image: url('../imgs/presentworthy.png')">
+                    <div class="proj-header">
+                        <h2>Present Worthy</h2>
+                    </div>
+                    <div class="proj-body">
+                        <p id="pwText" class="proj-text"></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script src="./js/text.js"></script>
 </div>

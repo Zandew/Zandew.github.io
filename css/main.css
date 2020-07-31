@@ -1,3 +1,7 @@
+body {
+    overflow-x: hidden;
+}
+
 .container {
   text-align: center;
 }
@@ -112,7 +116,7 @@
     color: gray;
 }
 
-#btn2 {
+#btn1 {
   margin-left: 30px;
   margin-right: 30px;
 }
@@ -186,4 +190,18 @@
     font-family: 'Balsamiq Sans';
     transition: all 0.5s;
     opacity: 0;
+}
+
+.main {
+    position: relative;
+    left: 0px;
+    width: 300%;
+    height: 430px;
+    transition: all 1s;
+}
+
+.page {
+    float: left;
+    width: calc(100%/3);
+    height: 100%;
 }
