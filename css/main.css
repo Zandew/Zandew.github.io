@@ -177,9 +177,11 @@
     border-bottom: 0px solid black;
     background-color: white;
     transition: all 0.75s;
+    justify-content: center;
 }
 
 .proj-text {
+    padding-top: 10px;
     color: black;
     font-family: 'Balsamiq Sans';
     transition: all 0.5s;
