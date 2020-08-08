@@ -13,7 +13,7 @@ layout: default
 </div>
 <div class="cont">
     <div class="buttons">
-      <span class="options" id="btn0" onclick="move(0)" style="color: black;"> About Me </span>
+      <span class="options" id="btn0" onclick="move(0)" style="color: black; min-width: 120px"> About Me </span>
       <span class="options" id="btn1" onclick="move(1)"> Solutions </span>
       <span class="options" id="btn2" onclick="move(2)"> Projects </span>
     </div>
@@ -26,7 +26,8 @@ layout: default
                 <p id="bio"></p>
             </div>
         </div>
-    </div><div class="page">
+    </div>
+    <div class="page">
         <div class="cont">
             <input type="text" placeholder="Find a Problem" id="search-box"><input type="image" src="/imgs/search.png" id="search-btn" onclick="find()">
             <h2 id="tip"> Enter a DMOJ problem code (e.g. ccc20s5) </h2>
@@ -34,28 +35,58 @@ layout: default
         <div id="code">
             
         </div>
-    </div><div class="page">
+    </div>
+    <div class="page">
         <div class="proj-container">
-            <a href="https://github.com/Zandew/Oracle" style="text-decoration: none" target="_blank">
-                <div class="proj" style="background-image: url('../imgs/minimusicwidget.png')" >
-                    <div class="proj-header">
-                        <h2>Oracle</h2>
+            <div class="panels" style="width: 100%; text-align: center">
+                <a href="https://github.com/Zandew/Oracle" style="text-decoration: none" target="_blank">
+                    <div class="proj" style="background-image: url('../imgs/minimusicwidget.png')" >
+                        <div class="proj-header">
+                            <h2>Oracle</h2>
+                        </div>
+                        <div class="proj-body">
+                            <p id="mmwText" class="proj-text"></p>
+                        </div>
                     </div>
-                    <div class="proj-body">
-                        <p id="mmwText" class="proj-text"></p>
+                </a>
+                <a href="https://github.com/Zandew/Present-Worthy" style="text-decoration: none" target="_blank">
+                    <div class="proj" style="background-image: url('../imgs/presentworthy.png')">
+                        <div class="proj-header">
+                            <h2>Present Worthy</h2>
+                        </div>
+                        <div class="proj-body">
+                            <p id="pwText" class="proj-text"></p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="slider">
+
+                <a href="#slide-1">1</a>
+                <a href="#slide-2">2</a>
+                <a href="#slide-3">3</a>
+                <a href="#slide-4">4</a>
+                <a href="#slide-5">5</a>
+            
+                <div class="slides">
+                    <div id="slide-1">
+                        1
+                    </div>
+                    <div id="slide-2">
+                        2
+                    </div>
+                    <div id="slide-3">
+                        3
+                    </div>
+                    <div id="slide-4">
+                        4
+                    </div>
+                    <div id="slide-5">
+                        5
                     </div>
                 </div>
-            </a>
-            <a href="https://github.com/Zandew/Present-Worthy" style="text-decoration: none" target="_blank">
-                <div class="proj" style="background-image: url('../imgs/presentworthy.png')">
-                    <div class="proj-header">
-                        <h2>Present Worthy</h2>
-                    </div>
-                    <div class="proj-body">
-                        <p id="pwText" class="proj-text"></p>
-                    </div>
-                </div>
-            </a>
+            </div>
         </div>
     </div>
     <script src="./js/text.js"></script>
