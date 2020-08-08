@@ -5,6 +5,7 @@ function move(index) {
     document.getElementById("btn"+(index+2)%3).style.color = "gray";
 }
 
+
 function find(){
     var prob = document.getElementById("search-box").value.trim().toLowerCase();
     for (var key in window.store){
@@ -15,5 +16,4 @@ function find(){
     }
     document.getElementById("code").innerHTML = '<div id="error"><h1>NOT FOUND</h1></div>';
 }
-
 
