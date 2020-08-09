@@ -6,12 +6,12 @@
 }
 
 #note {
-    color: white;
+    opacity: 0;
     transition: 1s;
 }
 
 #note:hover {
-    color: black;
+    opacity: 1;
 }
 
 #andrewxue {
