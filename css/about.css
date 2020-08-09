@@ -1,0 +1,28 @@
+#about {
+    font-family: 'Balsamiq Sans';
+    width: 70%;
+    height: 200px;
+    display: inline-block;
+}
+
+#note {
+    color: white;
+    transition: 1s;
+}
+
+#note:hover {
+    color: black;
+}
+
+#andrewxue {
+    width: 25%;
+    height: auto;
+    float: left;
+    border-radius: 35%;
+}
+
+#bio {
+    margin-left: 30%;
+    width: 60%;
+    height: auto;
+}

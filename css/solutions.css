@@ -1,0 +1,24 @@
+#search-box {
+    outline: none;
+    width: 200px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#search-btn {
+    width: 30px;
+    height: 30px;
+    outline: none;
+    margin-left: 5px;
+}
+
+#tip {
+    font-size: 10px;
+    color: gray;
+}
+
+#code-ctn, #error {
+    width: fit-content;
+    margin: 3% auto;
+}
