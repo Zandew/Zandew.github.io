@@ -4,6 +4,8 @@
     height: 25px;
     display: inline-block;
     vertical-align: top;
+    background: transparent;
+    border-radius: 5px;
 }
 
 #search-btn {
