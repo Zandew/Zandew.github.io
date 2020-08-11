@@ -27,7 +27,7 @@
 }
 
 #andrewxue-narrow {
-    width: 70%;
+    width: min(200px, 70%);
     border-radius: 20%;
 }
 
@@ -38,10 +38,10 @@
 }
 
 #bio-narrow {
-    margin: 10%;
+    margin: 2% 10%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
     #about-narrow {
         display: block !important;
     }
