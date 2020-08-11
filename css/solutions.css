@@ -30,19 +30,18 @@
     width: 10px;
   }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: transparent; 
-  }
+}
 
-  ::-webkit-scrollbar-thumb {
-      background: black;
-      border-radius: 5px;
-  }
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 5px;
+}
 
-  ::-webkit-scrollbar-corner {
+::-webkit-scrollbar-corner {
     background: transparent;
-  }
+}
    
 #prettyprint {
     display: inline-block;
