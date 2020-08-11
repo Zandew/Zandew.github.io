@@ -10,7 +10,7 @@ function find(){
     var prob = document.getElementById("search-box").value.trim().toLowerCase();
     for (var key in window.store){
         if (window.store[key].title.toLowerCase() == prob){
-            document.getElementById("code").innerHTML = '<div id="code-ctn"><pre class="prettyprint lang-cpp">'+window.store[key].content+'</pre></div>';
+            document.getElementById("code").innerHTML = '<div id="code-ctn"><pre id="prettyprint" class="prettyprint lang-cpp">'+window.store[key].content+'</pre></div>';
             return;
         }
     }

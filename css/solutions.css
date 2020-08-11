@@ -21,6 +21,30 @@
 }
 
 #code-ctn, #error {
-    width: fit-content;
-    margin: 3% auto;
+    width: min(700px, 90%);
+    height: 400px;
+    margin: 0 auto;
+    overflow: scroll;
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: black;
+      border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+   
+#prettyprint {
+    display: inline-block;
+    white-space: pre-wrap;
 }
