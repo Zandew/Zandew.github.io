@@ -16,4 +16,3 @@ function find(){
     }
     document.getElementById("code").innerHTML = '<div id="error"><h1>NOT FOUND</h1></div>';
 }
-

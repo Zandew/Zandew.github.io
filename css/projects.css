@@ -63,21 +63,6 @@
     backface-visibility: hidden;
 }
 
-
-.main {
-    position: relative;
-    left: 0px;
-    width: 300%;
-    height: 430px;
-    transition: all 1s;
-}
-
-.page {
-    float: left;
-    width: calc(100%/3);
-    height: 100%;
-}
-
 .slider {
     display: none;
     width: 300px;

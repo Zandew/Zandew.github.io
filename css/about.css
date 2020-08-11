@@ -5,6 +5,11 @@
     display: inline-block;
 }
 
+#about-narrow {
+    display: none;
+    font-family: 'Balsamiq Sans';
+}
+
 #note {
     opacity: 0;
     transition: 1s;
@@ -18,11 +23,29 @@
     width: 25%;
     height: auto;
     float: left;
-    border-radius: 35%;
+    border-radius: 20%;
+}
+
+#andrewxue-narrow {
+    width: 70%;
+    border-radius: 20%;
 }
 
 #bio {
     margin-left: 30%;
     width: 60%;
     height: auto;
+}
+
+#bio-narrow {
+    margin: 10%;
+}
+
+@media screen and (max-width: 800px) {
+    #about-narrow {
+        display: block !important;
+    }
+    #about {
+        display: none !important;
+    }
 }
