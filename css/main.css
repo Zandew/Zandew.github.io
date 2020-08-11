@@ -13,6 +13,8 @@ body {
 
 .cont {
   text-align: center;
+  width: 100%;
+  height: 100%;
 }
 
 #title{
@@ -33,9 +35,9 @@ body {
     color: gray;
     cursor: pointer;
     position: relative;
-    padding: 10px 20px;
-    margin-left: 15px;
-    margin-right: 15px;
+    padding: 10px 15px;
+    margin-left: min(15px, 1%);
+    margin-right: min(15px, 1%);
     font-size: 28px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -75,5 +77,5 @@ body {
     position: relative;
     justify-content: center;
     text-align: center;
-    padding: 30px;
+    padding: 30px
 }
