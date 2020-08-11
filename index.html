@@ -3,6 +3,8 @@ layout: default
 ---
 
 <h1 id="title"> Andrew Xue </h1>
+
+<!-- LOGO LINKS -->
 <div class="cont">
     <div class="logos">
         <a href="https://github.com/Zandew"><img class="logo" src="/imgs/github.png" alt="Github"></a>
@@ -11,6 +13,8 @@ layout: default
         <a href="https://codeforces.com/profile/Zandew"><img class="logo" src="/imgs/codeforces.png" alt="Codeforces"></a>
     </div>
 </div>
+
+<!-- NAVIGATION BUTTONS -->
 <div class="cont">
     <div class="buttons">
       <span class="options" id="btn0" onclick="move(0)" style="color: black;"> About Me </span>
@@ -18,19 +22,21 @@ layout: default
       <span class="options" id="btn2" onclick="move(2)"> Projects </span>
     </div>
 </div>
+
+<!-- INFO PAGES -->
 <div id="main" class="main">
+
+    <!-- ABOUT ME -->
     <div class="page">
         <div class="cont">
             <div id="about"> 
                 <img id="andrewxue" src="/imgs/andrewxue.png" alt="Andrew Xue"> 
                 <p id="bio"></p>
             </div>
-            <div id="about-narrow">
-                <img id="andrewxue-narrow" src="/imgs/andrewxue.png" alt="Andrew Xue">
-                <p id="bio-narrow"></p>
-            </div>
         </div>
     </div>
+
+    <!-- SOLUTIONS -->
     <div class="page">
         <div class="cont">
             <input type="text" placeholder="Find a Problem" id="search-box"><input type="image" src="/imgs/search.png" id="search-btn" onclick="find()">
@@ -40,8 +46,12 @@ layout: default
             
         </div>
     </div>
+
+    <!-- PROJECTS -->
     <div class="page">
         <div class="panel-container">
+
+            <!-- LONG VIEW -->
             <div class="panels" style="width: 100%; text-align: center">
                 <div class="panel-outer">
                     <div class="panel-inner">
@@ -67,6 +77,7 @@ layout: default
                 </div>
             </div>
             
+            <!-- NARROW VIEW -->
             <div class="slider">
                 <div class="slides">
                     <a href="https://github.com/Zandew/Oracle" style="text-decoration: none" target="_blank">

@@ -4,6 +4,6 @@ let oraText = 'A fully functional music player and playlist builder with ability
 
 let pwText = 'A web app that calculates the \'worthiness\' of a present based on parameters specified by the user. Built using Node.js and Javascript.';
 
-document.getElementById("bio").innerHTML = document.getElementById("bio-narrow").innerHTML = aboutText;
+document.getElementById("bio").innerHTML = aboutText;
 document.getElementById("oraText1").innerHTML = document.getElementById("oraText2").innerHTML = oraText;
 document.getElementById("pwText1").innerHTML = document.getElementById("pwText2").innerHTML = pwText;
