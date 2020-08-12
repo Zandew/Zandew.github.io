@@ -47,3 +47,7 @@
     display: inline-block;
     white-space: pre-wrap;
 }
+
+#error {
+    text-align: center;
+}
