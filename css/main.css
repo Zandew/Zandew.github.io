@@ -1,6 +1,18 @@
 html {
     width: 100%;
     height: 100%;
+    animation: onLoad 2s;
+}
+
+@keyframes onLoad {
+    from {
+        opacity: 0;
+        transform: rotateX(10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
 }
 
 body {
