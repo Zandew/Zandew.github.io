@@ -4,15 +4,6 @@
     display: inline-block;
 }
 
-#note {
-    opacity: 0;
-    transition: 1s;
-}
-
-#note:hover {
-    opacity: 1;
-}
-
 #andrewxue {
     width: 25%;
     height: auto;
