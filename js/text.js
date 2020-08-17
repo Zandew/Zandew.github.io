@@ -12,7 +12,7 @@ let oraText = 'A fully functional music player and playlist builder with ability
 
 let pwText = 'A web app that calculates the \'worthiness\' of a present based on parameters specified by the user. Built using Node.js and Javascript.';
 
-let dpText = 'My implementations of simple neural networks in Python, vectorized using the NumPy module. Ability to perform binary classification (e.g cat or not).';
+let dpText = 'My implementations of simple neural networks in Python, vectorized using NumPy. Trained and tested for 80% accuracy on binary classification datasets (e.g cat or not).';
 
 document.getElementById("bio").innerHTML = aboutText;
 document.getElementById("oraText1").innerHTML = document.getElementById("oraText2").innerHTML = oraText;
