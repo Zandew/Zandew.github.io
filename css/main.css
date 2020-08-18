@@ -48,7 +48,7 @@ body {
     width: 50px;
     height: auto;
     margin: 2px;
-    transition: all 1s;
+    transition: all 0.5s;
 }
 
 .logo:hover {
