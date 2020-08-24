@@ -20,6 +20,32 @@
     color: gray;
 }
 
+#conan {
+    width: 250px;
+    margin: 10px;
+}
+
+#sweat {
+    opacity: 0;
+    transition: all 1s;
+}
+
+#code {
+    text-align: center;
+}
+
+#glasses {
+}
+
+@keyframes rot {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
 #code-ctn, #error {
     width: min(700px, 90%);
     height: 400px;

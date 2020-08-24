@@ -14,5 +14,6 @@ function find(){
             return;
         }
     }
-    document.getElementById("code").innerHTML = '<div id="error"><h1>NOT FOUND</h1></div>';
+    document.getElementById("sweat").style.opacity = 1;
+    document.getElementById("glasses").style.transform = "rotate('20deg')";
 }
