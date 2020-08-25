@@ -1,5 +1,5 @@
 let aboutText = `
-    Hello! I\'m a graduate from Earl Haig SS and also an incoming Computer Science student at the University of Waterloo.<br>
+    Hello, I'm Andrew Xue, a graduate from Earl Haig SS and also an incoming Computer Science student at the University of Waterloo.<br>
     <br>I enjoy coding and am a (now retired) competitive programmer. Not that I\'ve had much of a career,
      but I peaked in 2020 when I scored 69 on the Canadian Computing Competition and qualified for the Candian Computing Olympiad. 
      Despite my decent score on the CCC, I only managed to come out with a bronze medal due to my subpar performance at the CCO.<br>
