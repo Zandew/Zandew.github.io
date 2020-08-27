@@ -1,7 +1,6 @@
 function move(index) {
     console.log("MOVE TO "+index);
     document.getElementById("main").style.transform = `translateX(calc(-100%/3*${index}))`;
-    //document.getElementById("main").style.left = `calc(-100%*${index})`;
     document.getElementById("btn"+index).style.color = "black";
     document.getElementById("btn"+(index+1)%3).style.color = "gray";
     document.getElementById("btn"+(index+2)%3).style.color = "gray";
