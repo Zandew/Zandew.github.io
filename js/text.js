@@ -24,6 +24,8 @@ let accomplishments = `
     </div>
 `
 
+let aboutList = [education, programming, hobbies, accomplishments];
+
 let oraText = 'A fully functional music player and playlist builder with ability to recommend songs based on user\'s mood. MacOS app built using Swift.';
 
 let pwText = 'A web app that calculates the \'worthiness\' of a present based on parameters specified by the user. Built using Node.js and Javascript.';

@@ -21,15 +21,7 @@ function find(){
 }
 
 function showText(idx) {
-    if (idx==0) {
-        document.getElementById('about-main').innerHTML = education;
-    }else if (idx==1) {
-        document.getElementById('about-main').innerHTML = programming;
-    }else if (idx==2) {
-        document.getElementById('about-main').innerHTML = hobbies;
-    }else if (idx==3) {
-        document.getElementById('about-main').innerHTML = accomplishments;
-    }
+    document.getElementById('about-main').innerHTML = aboutList[idx];
 }
 
 window.onbeforeunload = () => {   
@@ -58,35 +50,53 @@ function push(positions) {
     }
 }
 
-window.onload = () => {
+function reset() {
+    for (let i=0; i<4; i++){
+        document.getElementById(`about-item${i}`).style.transform = `translate(0, 0)`;
+    }
+}
+
+function pushOut() {
     let positions = [];
     let rad = 25;
     let radBig = 175;
     let eps = 75;
     let lim = 300;
-    console.log(window.innerWidth);
-    for (let i=0; i<4; i++){
-        let farEnough = false;
-        console.log(i);
-        console.log(positions);
-        while (!farEnough) {
-            let x = Math.floor(Math.random() * 20)+6.5;
-            let y = Math.floor(Math.random() * 350);  
-            
-            farEnough = true;  
-            console.log(i);
-            for (let j=0; j<i; j++){
-                let dist = Math.sqrt(Math.pow(x*window.innerWidth*3/100-positions[j].x*window.innerWidth*3/100, 2)+Math.pow(y-positions[j].y, 2));
-                if (dist<rad*2+eps) {
-                    farEnough = false;
-                }
-            }
-            let dist = Math.sqrt(Math.pow(x*window.innerWidth*3/100-window.innerWidth/2, 2)+Math.pow(y-radBig, 2));
-            if (farEnough && dist > rad+radBig+eps && dist < lim) {
-                positions.push({ x, y });
-            }else farEnough = false;
+    if (window.innerWidth < 850) {
+        let margin = 75;
+        let left = (window.innerWidth-4*rad-3*margin)/2;
+        for (let i=0; i<4; i++){
+            positions.push({ x: left*100/(3*window.innerWidth), y: 400 });    
+            left += rad+margin;
         }
-    } 
+    }else {
+        for (let i=0; i<4; i++){
+            let farEnough = false;
+            console.log(i);
+            console.log(positions);
+            while (!farEnough) {
+                let x = Math.floor(Math.random() * 20)+6.5;
+                let y = Math.floor(Math.random() * 350);  
+                
+                farEnough = true;  
+                console.log(i);
+                for (let j=0; j<i; j++){
+                    let dist = Math.sqrt(Math.pow(x*window.innerWidth*3/100-positions[j].x*window.innerWidth*3/100, 2)+Math.pow(y-positions[j].y, 2));
+                    if (dist<rad*2+eps) {
+                        farEnough = false;
+                    }
+                }
+                let dist = Math.sqrt(Math.pow(x*window.innerWidth*3/100-window.innerWidth/2, 2)+Math.pow(y-radBig, 2));
+                if (farEnough && dist > rad+radBig+eps && dist < lim) {
+                    positions.push({ x, y });
+                }else farEnough = false;
+            }
+        } 
+    }
+    push(positions);
+}
+
+window.onload = () => {
     document.getElementById('about').innerHTML = `<div id="about-main" class="about-main">${defaultText}</div>`;
     for (let i=0; i<4; i++){
         document.getElementById('about').innerHTML += `
@@ -95,5 +105,18 @@ window.onload = () => {
             </div>
         `;
     }
-    setTimeout(() => push(positions), 0);
+    pushOut();
+}
+
+let last;
+
+window.onresize = () => {
+    reset();
+    let key = Math.random().toString(36).substr(2, 15);
+    last = key;
+    setTimeout(() => {
+        if (last === key) {
+            pushOut();
+        }
+    }, 750);
 }
