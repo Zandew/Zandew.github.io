@@ -11,7 +11,6 @@
         <link rel="stylesheet" type="text/css" href="./css/about.css">
         <link rel="stylesheet" type="text/css" href="./css/solutions.css">
         <link rel="stylesheet" type="text/css" href="./css/projects.css">
-        <script src="./js/index.js"></script>
         <script>
             window.store = {
                 {% for post in site.posts %}
@@ -26,7 +25,7 @@
         <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js">
         </script>
     </head>
-    <body onload="move(0)">
+    <body>
         {{ content }}
     </body>
 </html>

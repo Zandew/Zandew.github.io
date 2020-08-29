@@ -1,10 +1,79 @@
-#about {
-    font-family: 'Balsamiq Sans';
-    width: 40%;
-    display: inline-block;
+.about {
+    width: 100%;
+    height: 400px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#bio {
-    width: 100%;
-    height: auto;
+.about-main {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: 3px 3px 10px gray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 18px;
+    font-family: 'montserrat';
+    z-index: 2;
+}
+
+.about-item {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1.5s ease, box-shadow 0.75s ease;
+}
+
+.about-icon {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+}
+
+.about-item:hover {
+    box-shadow: inset 0 0 0 50px black;
+}
+
+#education {
+    content: url('/imgs/education.png');
+}
+
+.about-item:hover > #education {
+    content: url('/imgs/educationLight.png');
+}
+
+#programming {
+    content: url('/imgs/programming.png');
+}
+
+.about-item:hover > #programming {
+    content: url('/imgs/programmingLight.png');
+}
+
+
+#hobbies {
+    content: url('/imgs/hobbies.png');
+}
+
+.about-item:hover > #hobbies {
+    content: url('/imgs/hobbiesLight.png');
+}
+
+
+#accomplishments {
+    content: url('/imgs/accomplishments.png');
+}
+
+.about-item:hover > #accomplishments {
+    content: url('/imgs/accomplishmentsLight.png');
 }
