@@ -34,14 +34,12 @@ document.onkeydown = function (t) {
     }
 }
 
-let iconName = ['education', 'programming', 'hobbies', 'accomplishments'];
-let aboutIcons = ['/imgs/education.png', '/imgs/programming.png', '/imgs/hobbies.png', '/imgs/accomplishments.png'];
-let aboutLightIcons = ['/imgs/educationLight.png', '/imgs/programmingLight.png', '/imgs/hobbiesLight.png', '/imgs/accomplishmentsLight.png'];
+let iconName = ['education', 'programming', 'hobbies', 'accomplishments', 'techstack'];
 
 function push(positions) {
     let cx = window.innerWidth/2;
     let cy = 125;
-    for (let i=0; i<4; i++){
+    for (let i=0; i<5; i++){
         let dx = positions[i].x*window.innerWidth*3/100-cx;
         let dy = positions[i].y-cy;
         setTimeout(() => {
@@ -51,35 +49,32 @@ function push(positions) {
 }
 
 function reset() {
-    for (let i=0; i<4; i++){
+    for (let i=0; i<5; i++){
         document.getElementById(`about-item${i}`).style.transform = `translate(0, 0)`;
     }
 }
 
 function pushOut() {
     let positions = [];
-    let rad = 25;
+    let rad = 30;
     let radBig = 175;
-    let eps = 75;
+    let eps = 50;
     let lim = 300;
     if (window.innerWidth < 850) {
-        let margin = 75;
-        let left = (window.innerWidth-4*rad-3*margin)/2;
-        for (let i=0; i<4; i++){
+        let margin = 50;
+        let left = (window.innerWidth-5*rad-4*margin)/2;
+        for (let i=0; i<5; i++){
             positions.push({ x: left*100/(3*window.innerWidth), y: 400 });    
             left += rad+margin;
         }
     }else {
-        for (let i=0; i<4; i++){
+        for (let i=0; i<5; i++){
             let farEnough = false;
-            console.log(i);
-            console.log(positions);
             while (!farEnough) {
                 let x = Math.floor(Math.random() * 20)+6.5;
                 let y = Math.floor(Math.random() * 350);  
                 
                 farEnough = true;  
-                console.log(i);
                 for (let j=0; j<i; j++){
                     let dist = Math.sqrt(Math.pow(x*window.innerWidth*3/100-positions[j].x*window.innerWidth*3/100, 2)+Math.pow(y-positions[j].y, 2));
                     if (dist<rad*2+eps) {
@@ -101,7 +96,7 @@ let width;
 window.onload = () => {
     width = window.innerWidth;
     document.getElementById('about').innerHTML = `<div id="about-main" class="about-main">${defaultText}</div>`;
-    for (let i=0; i<4; i++){
+    for (let i=0; i<5; i++){
         document.getElementById('about').innerHTML += `
             <div id="about-item${i}" class="about-item" onclick="showText(${i})">
                 <img id="${iconName[i]}" class="about-icon"></img>

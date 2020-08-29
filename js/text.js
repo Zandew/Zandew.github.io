@@ -24,7 +24,21 @@ let accomplishments = `
     </div>
 `
 
-let aboutList = [education, programming, hobbies, accomplishments];
+let techstack = `
+    <div>
+        <h3> My Tech Stack </h3>
+        <div style='width: 300px'>
+            <img class='stack-icon' src='/imgs/python.png'></img>
+            <img class='stack-icon' src='/imgs/cpp.png'></img>
+            <img class='stack-icon' src='/imgs/javascript.png'></img>
+            <img class='stack-icon' src='/imgs/nodejs.png'></img>
+            <img class='stack-icon' src='/imgs/react.png'></img>
+            <img class='stack-icon' src='/imgs/redux.png'></img>
+        <div>
+    </div>
+`;
+
+let aboutList = [education, programming, hobbies, accomplishments, techstack];
 
 let oraText = 'A fully functional music player and playlist builder with ability to recommend songs based on user\'s mood. MacOS app built using Swift.';
 

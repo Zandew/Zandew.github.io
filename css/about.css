@@ -40,6 +40,12 @@
     z-index: 1;
 }
 
+.stack-icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
 .about-item:hover {
     box-shadow: inset 0 0 0 50px black;
 }
@@ -76,4 +82,12 @@
 
 .about-item:hover > #accomplishments {
     content: url('/imgs/accomplishmentsLight.png');
+}
+
+#techstack {
+    content: url('/imgs/techstack.png');
+}
+
+.about-item:hover > #techstack {
+    content: url('/imgs/techstackLight.png');
 }
