@@ -32,6 +32,6 @@ let pwText = 'A web app that calculates the \'worthiness\' of a present based on
 
 let dpText = 'My implementations of simple neural networks in Python, vectorized using NumPy. Trained and tested for 80% accuracy on binary classification datasets (e.g cat or not).';
 
-document.getElementById("oraText1").innerHTML = document.getElementById("oraText2").innerHTML = oraText;
-document.getElementById("pwText1").innerHTML = document.getElementById("pwText2").innerHTML = pwText;
-document.getElementById("dlText1").innerHTML = document.getElementById("dlText2").innerHTML = dpText;
+document.getElementById("oraText1").innerHTML = oraText;
+document.getElementById("pwText1").innerHTML = pwText;
+document.getElementById("dlText1").innerHTML = dpText;

@@ -96,7 +96,10 @@ function pushOut() {
     push(positions);
 }
 
+let width;
+
 window.onload = () => {
+    width = window.innerWidth;
     document.getElementById('about').innerHTML = `<div id="about-main" class="about-main">${defaultText}</div>`;
     for (let i=0; i<4; i++){
         document.getElementById('about').innerHTML += `
@@ -111,12 +114,15 @@ window.onload = () => {
 let last;
 
 window.onresize = () => {
-    reset();
-    let key = Math.random().toString(36).substr(2, 15);
-    last = key;
-    setTimeout(() => {
-        if (last === key) {
-            pushOut();
-        }
-    }, 750);
+    if (window.innerWidth != width) {
+        width = window.innerWidth;
+        reset();
+        let key = Math.random().toString(36).substr(2, 15);
+        last = key;
+        setTimeout(() => {
+            if (last === key) {
+                pushOut();
+            }
+        }, 750);
+    } 
 }
