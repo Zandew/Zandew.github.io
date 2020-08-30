@@ -1,23 +1,23 @@
 function move(index) {
-    document.getElementById("main").style.transform = `translateX(calc(-100%/3*${index}))`;
-    document.getElementById("btn"+index).style.color = "black";
-    document.getElementById("btn"+(index+1)%3).style.color = "gray";
-    document.getElementById("btn"+(index+2)%3).style.color = "gray";
+    document.getElementById('main').style.transform = `translateX(calc(-100%/3*${index}))`;
+    document.getElementById('btn'+index).style.color = 'black';
+    document.getElementById('btn'+(index+1)%3).style.color = 'gray';
+    document.getElementById('btn'+(index+2)%3).style.color = 'gray';
 }
 
 
 function find(){
-    console.log("SEARCHED");
-    var prob = document.getElementById("search-box").value.trim().toLowerCase();
+    console.log('SEARCHED');
+    var prob = document.getElementById('search-box').value.trim().toLowerCase();
     for (var key in window.store){
         if (window.store[key].title.toLowerCase() == prob){
-            document.getElementById("code").innerHTML = '<div id="code-ctn"><pre id="prettyprint" class="prettyprint lang-cpp">'+window.store[key].content+'</pre></div>';
-            document.getElementById("error").innerHTML = "";
+            document.getElementById('code').innerHTML = `<div id='code-ctn'><pre id='prettyprint' class='prettyprint lang-cpp'>'+window.store[key].content+'</pre></div>`;
+            document.getElementById('error').innerHTML = ``;
             return;
         }
     }
-    document.getElementById("code").innerHTML = "";
-    document.getElementById("error").innerHTML = "No File Found.";
+    document.getElementById('code').innerHTML = '';
+    document.getElementById('error').innerHTML = 'No File Found.';
 }
 
 function showText(idx) {
@@ -35,6 +35,8 @@ document.onkeydown = function (t) {
 }
 
 let iconName = ['education', 'programming', 'hobbies', 'accomplishments', 'techstack'];
+let aboutIcons = ['/imgs/education.png', '/imgs/programming.png', '/imgs/hobbies.png', '/imgs/accomplishments.png', '/imgs/techstack.png'];
+let aboutLightIcons = ['/imgs/educationLight.png', '/imgs/programmingLight.png', '/imgs/hobbiesLight.png', '/imgs/accomplishmentsLight.png', '/imgs/techstackLight.png'];
 
 function push(positions) {
     let cx = window.innerWidth/2;
@@ -43,14 +45,14 @@ function push(positions) {
         let dx = positions[i].x*window.innerWidth*3/100-cx;
         let dy = positions[i].y-cy;
         setTimeout(() => {
-            document.getElementById(`about-item${i}`).style.transform = `translate(${dx}px, ${dy}px)`;
+            document.getElementById(`${iconName[i]}`).style.transform = `translate(${dx}px, ${dy}px)`;
         }, i*500);
     }
 }
 
 function reset() {
     for (let i=0; i<5; i++){
-        document.getElementById(`about-item${i}`).style.transform = `translate(0, 0)`;
+        document.getElementById(`${iconName[i]}`).style.transform = `translate(0, 0)`;
     }
 }
 
@@ -95,12 +97,12 @@ let width;
 
 window.onload = () => {
     width = window.innerWidth;
-    document.getElementById('about').innerHTML = `<div id="about-main" class="about-main">${defaultText}</div>`;
+    document.getElementById('about').innerHTML = `<div id='about-main' class='about-main'>${defaultText}</div>`;
     for (let i=0; i<5; i++){
         document.getElementById('about').innerHTML += `
-            <div id="about-item${i}" class="about-item" onclick="showText(${i})">
-                <img id="${iconName[i]}" class="about-icon"></img>
-            </div>
+            <a id='${iconName[i]}' class='about-item' href='#${iconName[i]}' onclick='showText(${i})'>
+                <img id='${iconName[i]}Img' class='about-icon'></img>
+            </a>
         `;
     }
     pushOut();
