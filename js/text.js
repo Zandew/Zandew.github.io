@@ -46,6 +46,9 @@ let pwText = 'A web app that calculates the \'worthiness\' of a present based on
 
 let dpText = 'My implementations of simple neural networks in Python, vectorized using NumPy. Trained and tested for 80% accuracy on binary classification datasets (e.g cat or not).';
 
-document.getElementById("oraText1").innerHTML = oraText;
-document.getElementById("pwText1").innerHTML = pwText;
-document.getElementById("dlText1").innerHTML = dpText;
+let pText = 'A web app that turns online study sessions into social experiences. Built using Node.js, React.js, Socket.io, and Python. Overall winner of Ignition Hacks 2020';
+
+document.getElementById('oraText1').innerHTML = oraText;
+document.getElementById('pwText1').innerHTML = pwText;
+document.getElementById('dlText1').innerHTML = dpText;
+document.getElementById('pText1').innerHTML = pText;
