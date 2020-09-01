@@ -40,7 +40,7 @@
 .panel-outer {
     width: 230px;
     height: 230px;
-    padding: 50px;
+    margin: 50px;
     perspective: 1000px;
 }
   
@@ -52,7 +52,7 @@
     transform-style: preserve-3d;
 }
   
-.panel-inner:hover {
+.panel-outer:hover .panel-inner {
     transform: rotateY(180deg);
 }
   
