@@ -1,8 +1,7 @@
 .panel-container {
     width: 100%;
-    display: flex;
-    justify-content: center;
     text-align: center;
+    overflow: hidden;
 }
 
 .panels {
@@ -10,6 +9,8 @@
     justify-content: center;
     text-align: center;
     flex-wrap: wrap;
+    transform: translateY(0);
+    transition: 1s all ease;
 }
 
 .panel-front {

@@ -1,20 +1,20 @@
-let defaultText = `
-    <h1>Hello, I'm Andrew Xue</h1>
+const defaultText = `
+    <h1>Hello,<br>I'm Andrew Xue</h1>
 `
-let education = `
+const education = `
     I'm a computer science student at the University of Waterloo. I am currently looking for 2021 spring internships for my 1C term. I graduate in 2025.
 `
 
-let programming = `
+const programming = `
     My programming knowledge largely consists of algorithms and data structures as I was mainly a competitive programmer, but I am looking to expand my horizons 
     by delving into web development and software.
 `
 
-let hobbies = `
+const hobbies = `
     In my spare time, I enjoy playing sports (mainly badminton and chess), binging anime and manga, and working on side projects.    
 `
 
-let accomplishments = `
+const accomplishments = `
     <div>
         <h3> My Accomplishments </h3>
         <ul> 
@@ -24,7 +24,7 @@ let accomplishments = `
     </div>
 `
 
-let techstack = `
+const techstack = `
     <div>
         <h3> My Tech Stack </h3>
         <div style='width: 300px'>
@@ -38,15 +38,15 @@ let techstack = `
     </div>
 `;
 
-let aboutList = [education, programming, hobbies, accomplishments, techstack];
+const aboutList = [education, programming, hobbies, accomplishments, techstack];
 
-let oraText = 'A fully functional music player and playlist builder with ability to recommend songs based on user\'s mood. MacOS app built using Swift.';
+const oraText = 'A fully functional music player and playlist builder with ability to recommend songs based on user\'s mood. MacOS app built using Swift.';
 
-let pwText = 'A web app that calculates the \'worthiness\' of a present based on parameters specified by the user. Built using Node.js and Javascript.';
+const pwText = 'A web app that calculates the \'worthiness\' of a present based on parameters specified by the user. Built using Node.js and Javascript.';
 
-let dpText = 'My implementations of simple neural networks in Python, vectorized using NumPy. Trained and tested for 80% accuracy on binary classification datasets (e.g cat or not).';
+const dpText = 'My implementations of simple neural networks in Python, vectorized using NumPy. Trained and tested for 80% accuracy on binary classification datasets (e.g cat or not).';
 
-let pText = 'A web app that turns online study sessions into social experiences. Built using Node.js, React.js, Socket.io, and Python. Overall winner of Ignition Hacks 2020';
+const pText = 'A web app that turns online study sessions into social experiences. Built using Node.js, React.js, Socket.io, and Python. Overall winner of Ignition Hacks 2020';
 
 document.getElementById('oraText1').innerHTML = oraText;
 document.getElementById('pwText1').innerHTML = pwText;

@@ -24,6 +24,48 @@ function showText(idx) {
     document.getElementById('about-main').innerHTML = aboutList[idx];
 }
 
+row = 0;
+
+function showButtons() {
+    let panel = document.querySelector('.panel-outer');
+    let style = getComputedStyle(panel);
+    let w = parseInt(style.width.substring(0, style.width.length-2));
+    let m = parseInt(style.margin.substring(0, style.margin.length-2));
+    let eachRow = Math.floor(width/(w+2*m));
+    let totalRows = Math.ceil(4/eachRow);
+    if (row >= totalRows) up();
+    if (row==0) {
+        document.getElementById('up').style.opacity = '0';
+        document.getElementById('up').onclick = null;
+    }else {
+        document.getElementById('up').style.opacity = '1';
+        document.getElementById('up').onclick = up;
+    }
+    if (row==totalRows-1) {
+        document.getElementById('down').style.opacity = '0';
+        document.getElementById('down').onclick = null;
+    }else{
+        document.getElementById('down').style.opacity = '1';
+        document.getElementById('down').onclick = down;
+    }
+}
+
+function toRow() {
+    let dist = 330*row;
+    document.getElementById('panels').style.transform = `translateY(-${dist}px)`;
+    showButtons();
+}
+
+function up() {
+    row -= 1;
+    toRow();
+}
+
+function down() {
+    row += 1;
+    toRow();
+}
+
 window.onbeforeunload = () => {   
     document.activeElement.blur();  
 };
@@ -34,13 +76,13 @@ document.onkeydown = function (t) {
     }
 }
 
-let iconName = ['education', 'programming', 'hobbies', 'accomplishments', 'techstack'];
-let aboutIcons = ['/imgs/education.png', '/imgs/programming.png', '/imgs/hobbies.png', '/imgs/accomplishments.png', '/imgs/techstack.png'];
-let aboutLightIcons = ['/imgs/educationLight.png', '/imgs/programmingLight.png', '/imgs/hobbiesLight.png', '/imgs/accomplishmentsLight.png', '/imgs/techstackLight.png'];
+const iconName = ['education', 'programming', 'hobbies', 'accomplishments', 'techstack'];
+const aboutIcons = ['/imgs/education.png', '/imgs/programming.png', '/imgs/hobbies.png', '/imgs/accomplishments.png', '/imgs/techstack.png'];
+const aboutLightIcons = ['/imgs/educationLight.png', '/imgs/programmingLight.png', '/imgs/hobbiesLight.png', '/imgs/accomplishmentsLight.png', '/imgs/techstackLight.png'];
 
 function push(positions) {
-    let cx = window.innerWidth/2;
-    let cy = 125;
+    const cx = window.innerWidth/2;
+    const cy = 125;
     for (let i=0; i<5; i++){
         let dx = positions[i].x*window.innerWidth*3/100-cx;
         let dy = positions[i].y-cy;
@@ -58,10 +100,10 @@ function reset() {
 
 function pushOut() {
     let positions = [];
-    let rad = 30;
-    let radBig = 175;
-    let eps = 50;
-    let lim = 300;
+    const rad = 30;
+    const radBig = 175;
+    const eps = 50;
+    const lim = 300;
     if (window.innerWidth < 850) {
         let margin = 50;
         let left = (window.innerWidth-5*rad-4*margin)/2;
@@ -106,6 +148,7 @@ window.onload = () => {
         `;
     }
     pushOut();
+    showButtons();
 }
 
 let last;
@@ -121,5 +164,6 @@ window.onresize = () => {
                 pushOut();
             }
         }, 750);
+        showButtons();
     } 
 }
