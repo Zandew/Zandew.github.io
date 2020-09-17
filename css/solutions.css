@@ -53,6 +53,10 @@
     overflow: scroll;
     text-align: 'left';
 }
+
+#error {
+    height: 50px;
+}
 ::-webkit-scrollbar {
     width: 10px;
   }
