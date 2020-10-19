@@ -1,101 +1,128 @@
----
-layout: default
----
-<!-- LOGO LINKS -->
-<div class='cont' id='logo-cont'>
-    <div class='logos'>
-        <a href='https://github.com/Zandew'><img class='logo' src='/imgs/github.png' alt='Github' target='_blank'></a>
-        <a href='https://www.linkedin.com/in/andrew-xue/'><img class='logo' src='/imgs/linkedin.png' alt='LinkedIn' target='_blank'></a>
-        <a href='https://dmoj.ca/user/Wandex'><img class='logo' src='/imgs/dmoj.png' alt='DMOJ' target='_blank'></a>
-        <a href='https://codeforces.com/profile/Zandew'><img class='logo' src='/imgs/codeforces.png' alt='Codeforces' target='_blank'></a>
-    </div>
-</div>
-
-<!-- NAVIGATION BUTTONS -->
-<div class='cont'>
-    <div class='buttons'>
-      <span class='options' id='btn0' onclick='move(0)' style='color: black;'> About Me </span>
-      <span class='options' id='btn1' onclick='move(1)'> Solutions </span>
-      <span class='options' id='btn2' onclick='move(2)'> Projects </span>
-    </div>
-</div>
-
-<!-- INFO PAGES -->
-<div id='main' class='main'>
-
-    <!-- ABOUT ME -->
-    <div class='page'>
-        <div class='cont'>
-            <div id='about' class='about'>
-                <div id='about-main' class='about-main'></div> 
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Andrew Xue </title>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'>
+        <link rel='shortcut icon' type='image/x-icon' href='imgs/favicon.ico'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Concert+One|Balsamiq+Sans|Recursive|Rowdies|Rubik'>
+        <!-- <link rel='stylesheet' type='text/css' href='./css/bootstrap.css'> -->
+        <link rel='stylesheet' type='text/css' href='./css/main.css'>
+        <link rel='stylesheet' type='text/css' href='./css/about.css'>
+        <link rel='stylesheet' type='text/css' href='./css/solutions.css'>
+        <link rel='stylesheet' type='text/css' href='./css/projects.css'>
+        <script>
+            window.store = {
+                {% for post in site.posts %}
+                '{{ post.title }}': {
+                    'title': '{{post.title | xml_escape}}',
+                    'content': {{ post.content | jsonify}}
+                }
+                {% unless forloop.last %},{% endunless %}
+                {% endfor %}
+            };
+        </script>
+        <script src='https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js'>
+        </script>
+    </head>
+    <body>
+        <!-- LOGO LINKS -->
+        <div class='cont' id='logo-cont'>
+            <div class='logos'>
+                <a href='https://github.com/Zandew'><img class='logo' src='./imgs/github.png' alt='Github' target='_blank'></a>
+                <a href='https://www.linkedin.com/in/andrew-xue/'><img class='logo' src='./imgs/linkedin.png' alt='LinkedIn' target='_blank'></a>
+                <a href='https://dmoj.ca/user/Wandex'><img class='logo' src='./imgs/dmoj.png' alt='DMOJ' target='_blank'></a>
+                <a href='https://codeforces.com/profile/Zandew'><img class='logo' src='./imgs/codeforces.png' alt='Codeforces' target='_blank'></a>
             </div>
         </div>
-    </div>
 
-    <!-- SOLUTIONS -->
-    <div class='page'>
+        <!-- NAVIGATION BUTTONS -->
         <div class='cont'>
-            <input type='text' placeholder='Find a Problem' id='search-box'><input type='image' src='/imgs/search.png' id='search-btn' onclick='find()'>
-            <h2 id='tip'> Enter a DMOJ problem code (e.g. ccc20s5) </h2>
+            <div class='buttons'>
+            <span class='options' id='btn0' onclick='move(0)' style='color: black;'> About Me </span>
+            <span class='options' id='btn1' onclick='move(1)'> Solutions </span>
+            <span class='options' id='btn2' onclick='move(2)'> Projects </span>
+            </div>
         </div>
-        <div id='code'></div>
-        <div id='error'></div>
-    </div>
 
-    <!-- PROJECTS -->
-    <div class='page' style='text-align: center'>
-        <img id='up'src='../imgs/arrow.svg' onclick='up()' style='transition: 0.5s all;'></img>
-        <div class='panel-container'>
-            <div id='panels' class='panels' style='width: 100%; height: 350px; text-align: center;'>
-                <div class='panel-outer'>
-                    <div class='panel-inner'>
-                        <a href='https://github.com/Zandew/Oracle' style='text-decoration: none' target='_blank'>
-                            <img class='panel-front' src='../imgs/oracle.png'>
-                            <div class='panel-back'>
-                                <h2>Oracle</h2>
-                                <p id='oraText1'></p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class='panel-outer'>
-                    <div class='panel-inner'>
-                        <a href='https://github.com/Zandew/Present-Worthy' style='text-decoration: none' target='_blank'>
-                            <img class='panel-front' src='../imgs/presentworthy.png'>
-                            <div class='panel-back'>
-                                <h2>Present Worthy</h2>
-                                <p id='pwText1'></p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class='panel-outer'>
-                    <div class='panel-inner'>
-                        <a href='https://github.com/Zandew/DeepLearning' style='text-decoration: none' target='_blank'>
-                            <img class='panel-front' src='../imgs/cat.png'>
-                            <div class='panel-back'>
-                                <h2>Deep Learning</h2>
-                                <p id='dlText1'></p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class='panel-outer'>
-                    <div class='panel-inner'>
-                        <a href='https://github.com/Zandew/Peerify-backend' style='text-decoration: none' target='_blank'>
-                            <img class='panel-front' src='../imgs/peerify.png'>
-                            <div class='panel-back'>
-                                <h2>Peerify</h2>
-                                <p id='pText1'></p>
-                            </div>
-                        </a>
+        <!-- INFO PAGES -->
+        <div id='main' class='main'>
+
+            <!-- ABOUT ME -->
+            <div class='page'>
+                <div class='cont'>
+                    <div id='about' class='about'>
+                        <div id='about-main' class='about-main'></div> 
                     </div>
                 </div>
             </div>
-        </div>
-        <img id='down' src='../imgs/arrow.svg' onclick='down()' style='transform: rotate(180deg); transition: 0.5s all;'></img>
-    </div>
-</div>
 
-<script src='./js/index.js'></script>
-<script src='./js/text.js'></script>
+            <!-- SOLUTIONS -->
+            <div class='page'>
+                <div class='cont'>
+                    <input type='text' placeholder='Find a Problem' id='search-box'><input type='image' src='./imgs/search.png' id='search-btn' onclick='find()'>
+                    <h2 id='tip'> Enter a DMOJ problem code (e.g. ccc20s5) </h2>
+                </div>
+                <div id='code'></div>
+                <div id='error'></div>
+            </div>
+
+            <!-- PROJECTS -->
+            <div class='page' style='text-align: center'>
+                <img id='up'src='./imgs/arrow.svg' onclick='up()' style='transition: 0.5s all;'></img>
+                <div class='panel-container'>
+                    <div id='panels' class='panels' style='width: 100%; height: 350px; text-align: center;'>
+                        <div class='panel-outer'>
+                            <div class='panel-inner'>
+                                <a href='https://github.com/Zandew/Oracle' style='text-decoration: none' target='_blank'>
+                                    <img class='panel-front' src='./imgs/oracle.png'>
+                                    <div class='panel-back'>
+                                        <h2>Oracle</h2>
+                                        <p id='oraText1'></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class='panel-outer'>
+                            <div class='panel-inner'>
+                                <a href='https://github.com/Zandew/Present-Worthy' style='text-decoration: none' target='_blank'>
+                                    <img class='panel-front' src='./imgs/presentworthy.png'>
+                                    <div class='panel-back'>
+                                        <h2>Present Worthy</h2>
+                                        <p id='pwText1'></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class='panel-outer'>
+                            <div class='panel-inner'>
+                                <a href='https://github.com/Zandew/DeepLearning' style='text-decoration: none' target='_blank'>
+                                    <img class='panel-front' src='./imgs/cat.png'>
+                                    <div class='panel-back'>
+                                        <h2>Deep Learning</h2>
+                                        <p id='dlText1'></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class='panel-outer'>
+                            <div class='panel-inner'>
+                                <a href='https://github.com/Zandew/Peerify-backend' style='text-decoration: none' target='_blank'>
+                                    <img class='panel-front' src='./imgs/peerify.png'>
+                                    <div class='panel-back'>
+                                        <h2>Peerify</h2>
+                                        <p id='pText1'></p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img id='down' src='./imgs/arrow.svg' onclick='down()' style='transform: rotate(180deg); transition: 0.5s all;'></img>
+            </div>
+        </div>
+
+        <script src='./js/index.js'></script>
+        <script src='./js/text.js'></script>
+    </body>
+</html>

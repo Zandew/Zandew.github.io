@@ -51,11 +51,11 @@
 }
 
 #educationImg {
-    content: url('/imgs/education.png');
+    content: url('/oldsite/imgs/education.png');
 }
 
 .about-item:hover > #educationImg {
-    content: url('/imgs/educationLight.png');
+    content: url('/oldsite/imgs/educationLight.png');
 }
 
 #education:target {
@@ -63,15 +63,15 @@
 }
 
 #education:target > #educationImg {
-    content: url('/imgs/educationLight.png');
+    content: url('/oldsite/imgs/educationLight.png');
 }
 
 #programmingImg {
-    content: url('/imgs/programming.png');
+    content: url('/oldsite/imgs/programming.png');
 }
 
 .about-item:hover > #programmingImg {
-    content: url('/imgs/programmingLight.png');
+    content: url('/oldsite/imgs/programmingLight.png');
 }
 
 #programming:target {
@@ -79,15 +79,15 @@
 }
 
 #programming:target > #programmingImg {
-    content: url('/imgs/programmingLight.png');
+    content: url('/oldsite/imgs/programmingLight.png');
 }
 
 #hobbiesImg {
-    content: url('/imgs/hobbies.png');
+    content: url('/oldsite/imgs/hobbies.png');
 }
 
 .about-item:hover > #hobbiesImg {
-    content: url('/imgs/hobbiesLight.png');
+    content: url('/oldsite/imgs/hobbiesLight.png');
 }
 
 #hobbies:target {
@@ -95,15 +95,15 @@
 }
 
 #hobbies:target > #hobbiesImg {
-    content: url('/imgs/hobbiesLight.png');
+    content: url('/oldsite/imgs/hobbiesLight.png');
 }
 
 #accomplishmentsImg {
-    content: url('/imgs/accomplishments.png');
+    content: url('/oldsite/imgs/accomplishments.png');
 }
 
 .about-item:hover > #accomplishmentsImg {
-    content: url('/imgs/accomplishmentsLight.png');
+    content: url('/oldsite/imgs/accomplishmentsLight.png');
 }
 
 #accomplishments:target {
@@ -111,15 +111,15 @@
 }
 
 #accomplishments:target > #accomplishmentsImg {
-    content: url('/imgs/accomplishmentsLight.png');
+    content: url('/oldsite/imgs/accomplishmentsLight.png');
 }
 
 #techstackImg {
-    content: url('/imgs/techstack.png');
+    content: url('/oldsite/imgs/techstack.png');
 }
 
 .about-item:hover > #techstackImg {
-    content: url('/imgs/techstackLight.png');
+    content: url('/oldsite/imgs/techstackLight.png');
 }
 
 #techstack:target {
@@ -127,5 +127,5 @@
 }
 
 #techstack:target > #techstackImg {
-    content: url('/imgs/techstackLight.png');
+    content: url('/oldsite/imgs/techstackLight.png');
 }

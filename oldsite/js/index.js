@@ -77,8 +77,6 @@ document.onkeydown = function (t) {
 }
 
 const iconName = ['education', 'programming', 'hobbies', 'accomplishments', 'techstack'];
-const aboutIcons = ['/imgs/education.png', '/imgs/programming.png', '/imgs/hobbies.png', '/imgs/accomplishments.png', '/imgs/techstack.png'];
-const aboutLightIcons = ['/imgs/educationLight.png', '/imgs/programmingLight.png', '/imgs/hobbiesLight.png', '/imgs/accomplishmentsLight.png', '/imgs/techstackLight.png'];
 
 function push(positions) {
     const cx = window.innerWidth/2;
