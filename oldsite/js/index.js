@@ -7,7 +7,7 @@ function move(index) {
 
 
 function find(){
-    console.log('SEARCHED');
+    console.log(File.exi);
     var prob = document.getElementById('search-box').value.trim().toLowerCase();
     for (var key in window.store){
         if (window.store[key].title.toLowerCase() == prob){
