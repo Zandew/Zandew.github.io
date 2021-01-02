@@ -1,3 +1,45 @@
 body {
+    background-color: #F4E4D2;
+}
+
+#title {
+    font-family: 'Bebas Neue';
+    font-size: 50px;
+    color: #8F6593;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.about {
     font-family: 'Rambla';
+    font-size: 20px;
+    color: #594A26;
+    padding: 30px min(20%, 300px);
+}
+
+#link {
+    text-decoration: none;
+    color: #344966;
+}
+
+#link:hover {
+    color: #76818E;
+}
+
+#profiles {
+    font-family: 'Bebas Neue';
+    font-size: 30px;
+    text-align: center;
+}
+
+.logo {
+    width: 50px;
+    margin: 5px;
+    transition: all 0.5s;
+}
+
+.logo:hover {
+    width: 60px;
 }
