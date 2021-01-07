@@ -10,6 +10,13 @@ body {
     height: 150px;
     justify-content: center;
     align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.hr {
+    width: 70%;
+    background-color: brown;
+    border-color: brown;
 }
 
 .about {
@@ -32,6 +39,7 @@ body {
     font-family: 'Bebas Neue';
     font-size: 30px;
     text-align: center;
+    color: #7C6A0A;
 }
 
 .logo {
