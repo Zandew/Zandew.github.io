@@ -43,13 +43,13 @@ body {
 }
 
 .logo {
-    width: 50px;
+    width: 30px;
     margin: 5px;
     transition: all 0.5s;
 }
 
 .logo:hover {
-    width: 60px;
+    width: 40px;
 }
 
 #lipoker-logo {
